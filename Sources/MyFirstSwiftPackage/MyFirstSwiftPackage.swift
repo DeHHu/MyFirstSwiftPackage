@@ -3,4 +3,8 @@ public struct MyFirstSwiftPackage {
 
     public init() {
     }
+	
+	public var txt: String {
+		return text
+	}
 }
