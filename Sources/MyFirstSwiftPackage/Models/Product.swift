@@ -8,14 +8,14 @@
 import Foundation
 
 public struct Product: Codable {
-	let id: Int
-	let title, productDescription: String
-	let price: Int
-	let discountPercentage, rating: Double
-	let stock: Int
-	let brand, category: String
-	let thumbnail: String
-	let images: [String]
+	public let id: Int
+	public let title, productDescription: String
+	public let price: Int
+	public let discountPercentage, rating: Double
+	public let stock: Int
+	public let brand, category: String
+	public let thumbnail: String
+	public let images: [String]
 	
 	enum CodingKeys: String, CodingKey {
 		case id, title
