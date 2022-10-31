@@ -14,6 +14,7 @@ public protocol ProductsRepository {
 
 public class ProductsRepositoryImpl: ProductsRepository {
 	
+	public init() {}
 	public func product(by id: String, completion: @escaping (Result<Product, Error>) -> Void) {
 		AF.request("https://dummyjson.com/products/1", method: .get)
 			.responseDecodable(of: Product.self) { response in
