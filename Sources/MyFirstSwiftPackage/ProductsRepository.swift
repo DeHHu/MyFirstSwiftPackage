@@ -8,13 +8,13 @@
 import Foundation
 import Alamofire
 
-protocol ProductsRepository {
+public protocol ProductsRepository {
 	func product(by id: String, completion: @escaping (Result<Product, Error>) -> Void)
 }
 
-class ProductsRepositoryImpl: ProductsRepository {
+public class ProductsRepositoryImpl: ProductsRepository {
 	
-	func product(by id: String, completion: @escaping (Result<Product, Error>) -> Void) {
+	public func product(by id: String, completion: @escaping (Result<Product, Error>) -> Void) {
 		AF.request("https://dummyjson.com/products/1", method: .get)
 			.responseDecodable(of: Product.self) { response in
 				switch response.result {
